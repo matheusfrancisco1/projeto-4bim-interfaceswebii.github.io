@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css"/>
+    <script src="find!/script-inicial.js"></script>
+    <title>Alfinete Bazar</title>
+<body>
+  
+    <!--Navbar (Barra de Navegação) -->
+    <header class="header">
+        <nav class="container nav-content">
+            <!-- Logo -->
+            <a href="inicial.html" class="logo">
+                <span class="logo-highlight">find!</span>
+            </a>
+
+            <!-- Ícones e Busca -->
+            <div class="nav-icons">
+                <!-- Campo de Busca (Desktop) -->
+                <div class="desktop-search">
+                    <input type="search" placeholder="Buscar produtos..." class="search-input">
+                </div>
+
+                <!-- Carrinho -->
+                <a href="carrinho.html">
+                <button class="cart-button">
+                    
+                    <!-- Ícone de Carrinho (usando SVG inline) -->
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span class="cart-count">3</span>
+                </button>
+            </a>
+
+
+                <!-- Menu Hambúrguer (Mobile) -->
+                <button id="mobile-menu-button" class="mobile-menu-button cart-button">
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-8">
+<h1>
+  
+  </h1>
+        <!-- Carrossel (Slider) -->
+        <section class="carousel-section">
+            <div id="carousel" class="carousel-track">
+               
+                <div class="carousel-slide slide-1">
+                    <img class="main-img" src="alfinete.jpeg">
+                    <h2>Alfinete Bazar</h2>
+                    <p>Barueri - SP</p>
+                    <button class="buy-button">
+                    <a href="chat.html">Falar com o vendedor - Chat</a>
+                        </button>
+                    <button class="buy-button">
+                    <a href="https://wa.me/5511961808939?partnertoken=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJHb29nbGUiLCJpYXQiOjE3NjMzNTY3MDcsImV4cCI6MTc2MzM1NzAwNywidXJsIjoiaHR0cHM6Ly93YS5tZS81NTExOTYxODA4OTM5In0.GkUK6I694A_CSAeK-0eO3LBpNfANYGkvH_KlQ_ilzgxW7aJ5GT8cl-GizLqJsmUL50TC-VOnAmLSgokeQ18Heg">Whatsapp</a>
+                    </button>
+                     <button class="buy-button">
+                    <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/bazaralfinete/&ved=2ahUKEwiE1rzRt_iQAxUZrJUCHT6kOLcQFnoFCIEBEAE&usg=AOvVaw0eQxXx4MtHlffQt9WMJ9HB">Instagram</a>
+                    </button>
+                    <button class="buy-button">
+                    <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.bazaralfinete.com.br/&ved=2ahUKEwiE1rzRt_iQAxUZrJUCHT6kOLcQFnoECCEQAQ&usg=AOvVaw3_X4KmvBZ0xUbmlm8sMZDS">Site</a>
+                    </button>
+                    <p class="buy-button"><a href="https://maps.app.goo.gl/7acUJgbJcDwhUsyi8">CC das Rosas, 74 - Alphaville, Barueri - SP, 06453-029</a></p>
+                    <a></a>
+            </div>
+
+            <!-- Controles do Carrossel -->
+            <button id="prev-btn" class="carousel-control">
+                <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="next-btn" class="carousel-control">
+                <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </section>
+
+        <!--. Cards Destaque -->
+        <section>
+            <h3 class="section-title">Produtos em Destaque</h3>
+
+            <div class="product-grid">
+
+                <!-- Card de Produto 1 -->
+                <div class="product-card">
+                    <img src="jaqueta.webp" alt="Produto A" class="product-image">
+                    <h4>Jaqueta Vintage Caqui</h4>
+                    <p>Semi-usada</p>
+                    <div class="price-row">
+                        <span class="price">R$ 39,90</span>
+                        <button class="buy-button">
+                            Comprar
+                        </button
+                    </div>
+                </div>
+
+                <!-- Card de Produto 2 -->
+                <div class="product-card">
+                    <img src="vestido.jpg" alt="Produto B" class="product-image">
+                    <h4>Vestido Alternativo</h4>
+                    <p>Usado</p>
+                    <div class="price-row">
+                        <span class="price">R$ 49,00</span>
+                        <button class="buy-button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card de Produto 3 -->
+                <div class="product-card">
+                    <img src="santander.jpeg" alt="Produto C" class="product-image">
+                    <h4>Corta-Vento Ferrari Santander</h4>
+                    <p>Semi-usado</p>
+                    <div class="price-row">
+                        <span class="price">R$ 49,90</span>
+                        <button class="buy-button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card de Produto 4 -->
+                <div class="product-card">
+                    <img src="bone.jpeg" alt="Produto D" class="product-image">
+                    <h4>Boné New Era 5 Panel</h4>
+                    <p>Novo</p>
+                    <div class="price-row">
+                        <span class="price">R$ 59,50</span>
+                        <button class="buy-button">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+                
+                
+            </div>
+        </section>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+    </main>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 find! Todos os direitos reservados.</p>
+            
+        </div>
+    </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css"/>
+    <script src="find!/script-inicial.js"></script>
+    <title>find! - Página Inicial</title>
+<body>
+  
+    <!-- Navbar (Barra de Navegação) -->
+    <header class="header">
+        <nav class="container nav-content">
+            
+            <a href="inicial.html" class="logo">
+                <span class="logo-highlight">find!</span>
+            </a>
+
+           
+            <div class="nav-icons">
+             
+               
+
+                <!-- Carrinho -->
+                <a href="carrinho.html">
+                <button class="cart-button">
+                    
+                   
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span class="cart-count">3</span>
+                </button>
+            </a>
+
+
+                
+                <button id="mobile-menu-button" class="mobile-menu-button cart-button">
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-8">
+<h1>
+  
+  </h1>
+                        <div class="desktop-search">
+                    <input id="busca" type="search" placeholder="Buscar lojas ou produtos..." class="search-input">
+                </div>
+        <!--  Carrossel (Slider) -->
+ <section class="carousel-section">
+            <div id="carousel" class="carousel-track">
+
+                <div class="carousel-slide slide-1">
+                    <div class="slide-content">
+                        <div>
+                            <h2>Apoie o comércio local e aproveite a economia!</h2>
+                            <p>Além de ajudar o pequeno empreendedor, na find! você encontra os melhores preços em roupas e acessórios.</p>
+                           
+                        </div>
+                        
+                        <img src="bazar.jpg" alt="Bazar" class="slide-img">
+                    </div>
+                </div>
+                
+                <div class="carousel-slide slide-2">
+                    <div class="slide-content">
+                        <div>
+                            <h2>Descubra onde achar os itens da sua cultura!</h2>
+                            <p style="color: var(--color-text);">Desde bazares streetwear a lojas de artigos budistas.</p>
+                            
+                                
+                            
+                        </div>
+                       
+                         <img src="budismo.jpeg" alt="Budismo" class="slide-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles do Carrossel -->
+            <button id="prev-btn" class="carousel-control">
+                <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="next-btn" class="carousel-control">
+                <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </section>
+
+        <!-- Cards Destaques -->
+        <section>
+            <h3 class="section-title">Principais lojas</h3>
+
+            <div class="product-grid">
+
+                
+                
+                <div id="loja-1" class="product-card">
+                 
+                    <img src="alfinete.jpeg" alt="Produto A" class="product-image">
+                    <h4>Alfinete Bazar</h4>
+                    <p>CC das Rosas, 74 - Alphaville, Barueri - SP, 06453-029</p>
+                    <div class="price-row">
+                        <span class="price">Barueri - SP</span>
+                        <button class="buy-button">
+                            <a href="loja-1.html">Conhecer</a>
+                        </button
+                    </div>
+                </div>
+
+                
+                <div id="loja-2" autocapitalize=""class="product-card">
+                    <img src="unnamed (1).webp" alt="Produto B" class="product-image">
+                    <h4>Bazar da Rose</h4>
+                    <p>Rua Duarte da Costa, 239 - Pq. Imperial</p>
+                    <div class="price-row">
+                        <span class="price">Barueri - SP</span>
+                        <button class="buy-button">
+                            <a href="loja-2.html">Conhecer</a>
+                        </button>
+                    </div>
+                </div>
+
+               
+                <div class="product-card">
+                    <img src="budismo.jpeg" alt="Produto C" class="product-image">
+                    <h4>Loja de Artigos Religiosos Casa Indaial</h4>
+                    <p>Av. Getulio Vargas, 22 - Centro, São Paulo - SP</p>
+                    <div class="price-row">
+                        <span class="price">São Paulo - SP</span>
+                        <button class="buy-button">
+                            <a href="loja-3.html">Conhecer</a>
+                        </button>
+                    </div>
+                </div>
+
+             
+                <div class="product-card">
+                    <img src="alternativo.jpeg" alt="Produto D" class="product-image">
+                    <h4>NED Cultura Alternativa</h4>
+                    <p>Av. Pres. Costa e Silva, 226 - Helena Maria, Osasco - SP</p>
+                    <div class="price-row">
+                        <span class="price">Osasco - SP</span>
+                        <button class="buy-button">
+                            <a href="loja-4.html">Conhecer</a>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!----> VLIBRAS</!---->
+        
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+    </main>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 find! Todos os direitos reservados.</p>
+            
+        </div>
+    </footer>
+
+  
+</body>
+</html>

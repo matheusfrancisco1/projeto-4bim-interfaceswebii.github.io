@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="find!/script-inicial.js"></script>
+    <title>find! Chat</title>
+    <style>
+       
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #ef8100;/* Cor de destaque similar ao buy-button ou logo */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .chat-messages {
+            height: 400px;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f7f7f7;
+        }
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+        .message.user {
+            align-self: flex-end;
+            background-color: lightblue;           
+            color: #333;
+        }
+        .message.other {
+            align-self: flex-start;
+            background-color: #E8E8E8; /* Cinza claro */
+            color: #333;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 10px 15px;
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .chat-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-right: 10px;
+            outline: none;
+        }
+        .chat-send-button {
+            background-color: #ef8100; /* Cor de destaque */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        .chat-send-button:hover {
+            background-color: #6B8E23;
+        }
+    </style>
+</head>
+<body>
+  
+    <header class="header">
+        <nav class="container nav-content">
+            <a href="inicial.html" class="logo">
+                <span class="logo-highlight">find!</span>
+            </a>
+
+            <div class="nav-icons">
+                <div class="desktop-search">
+                    <input type="search" placeholder="Buscar..." class="search-input">
+                </div>
+
+                <a href="carrinho.html">
+                <button class="cart-button">
+                    
+                    <!-- Ícone de Carrinho (usando SVG inline) -->
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span class="cart-count">3</span>
+                </button>
+            </a>
+
+
+
+                <button id="mobile-menu-button" class="mobile-menu-button cart-button">
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-8">
+        <h1>💬 Chat com Alfinete Bazar</h1>
+
+        <section class="chat-container">
+            <div class="chat-header">
+                Alfinete Bazar
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+    
+                </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Digite sua mensagem...">
+                <button id="sendButton" class="chat-send-button">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+            </div>
+        </section>
+        
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2025 find! Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatInput = document.getElementById('chatInput');
+            const sendButton = document.getElementById('sendButton');
+            const chatMessages = document.getElementById('chatMessages');
+
+            function sendMessage() {
+                const messageText = chatInput.value.trim();
+
+                if (messageText === '') {
+                    return; 
+                }
+
+                
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', 'user'); // 'user' para mensagens enviadas por este usuário
+                messageDiv.textContent = messageText;
+
+                
+                chatMessages.appendChild(messageDiv);
+
+                // 3. Limpa o input
+                chatInput.value = '';
+
+                // 4. Rola para a última mensagem
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // --- Simulação de Resposta (Opcional, para testes) ---
+                setTimeout(() => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.classList.add('message', 'other');
+                    responseDiv.textContent = 'Obrigado pela sua mensagem. Um atendente responderá em breve!';
+                    chatMessages.appendChild(responseDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000); // Responde após 1 segundo
+                // ----------------------------------------------------
+            }
+
+            // Evento para o botão de envio
+            sendButton.addEventListener('click', sendMessage);
+
+            // Evento para a tecla 'Enter' no campo de input
+            chatInput.addEventListener('keypress', (event) => {
+                // A tecla 'Enter' tem o código 13
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Impede a quebra de linha padrão
+                    sendMessage();
+                }
+            });
+
+            // Garante que o chat está na parte inferior ao carregar a página
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+    </script>
+</body>
+</html>

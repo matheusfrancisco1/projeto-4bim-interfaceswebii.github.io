@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Meu Carrinho - find!</title>
+    <script src="find!/script-inicial.js"></script>
+</head>
+<body>
+  
+    <header class="header">
+        <nav class="container nav-content">
+            <a href="inicial.html" class="logo">
+                <span class="logo-highlight">find!</span>
+            </a>
+
+            <div class="nav-icons">
+                <div class="desktop-search">
+                    <input type="search" placeholder="Buscar produtos..." class="search-input">
+                </div>
+
+                <button class="cart-button">
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span class="cart-count">3</span>
+                </button>
+
+                <button id="mobile-menu-button" class="mobile-menu-button cart-button">
+                    <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-8">
+        
+        <section class="cart-page">
+            <h1 class="section-title">Meu Carrinho (3 itens)</h1>
+            
+            <div class="cart-content-wrapper">
+                
+                <div class="cart-items">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Preço Unit.</th>
+                                <th>Quantidade</th>
+                                <th>Subtotal</th>
+                                <th></th> </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-info">
+                                    <img src="jaqueta.webp" alt="Jaqueta Vintage Caqui" class="cart-item-image">
+                                    <div class="product-details">
+                                        <h4>Jaqueta Vintage Caqui</h4>
+                                        <p>Vendedor: Alfinete Bazar</p>
+                                    </div>
+                                </td>
+                                <td data-label="Preço Unit.">R$ 39,90</td>
+                                <td data-label="Quantidade">
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                </td>
+                                <td data-label="Subtotal">R$ 39,90</td>
+                                <td><button class="remove-item-btn">&times;</button></td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="product-info">
+                                    <img src="vestido.jpg" alt="Vestido Alternativo" class="cart-item-image">
+                                    <div class="product-details">
+                                        <h4>Vestido Alternativo</h4>
+                                        <p>Vendedor: Alfinete Bazar</p>
+                                    </div>
+                                </td>
+                                <td data-label="Preço Unit.">R$ 49,00</td>
+                                <td data-label="Quantidade">
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                </td>
+                                <td data-label="Subtotal">R$ 49,00</td>
+                                <td><button class="remove-item-btn">&times;</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="product-info">
+                                    <img src="bone.jpeg" alt="Boné New Era 5 Panel" class="cart-item-image">
+                                    <div class="product-details">
+                                        <h4>Boné New Era 5 Panel</h4>
+                                        <p>Vendedor: Alfinete Bazar</p>
+                                    </div>
+                                </td>
+                                <td data-label="Preço Unit.">R$ 59,50</td>
+                                <td data-label="Quantidade">
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                </td>
+                                <td data-label="Subtotal">R$ 59,50</td>
+                                <td><button class="remove-item-btn">&times;</button></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Resumo do Pedido</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal (3 itens)</span>
+                        <span class="summary-price">R$ 148,40</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span class="summary-price">R$ 15,00</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row total">
+                        <strong>Total</strong>
+                        <strong class="summary-price-total">R$ 163,40</strong>
+                    </div>
+
+                    <button class="buy-button checkout-button">
+                        Finalizar Compra
+                    </button>
+                    
+                    <p class="continue-shopping">
+                        <a href="inicial.html">&leftarrow; Continuar Comprando</a>
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+        
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2025 find! Todos os direitos reservados.</p>
+        </div>
+    </footer>
+  
+</body>
+</html>
